@@ -1,17 +1,15 @@
-{
-  "language": "nodejs",
-  "run": "npm run web",
-  "entrypoint": "App.js",
-  "hidden": [".config", "package-lock.json", "node_modules", ".expo"],
-  "env": {
-    "NODE_VERSION": "18"
-  },
-  "packager": {
-    "language": "nodejs",
-    "manager": "npm",
-    "afterInstall": "echo 'Bağımlılıklar yüklendi! Web sunucusu başlatılıyor...'"
-  },
-  "nix": {
-    "channel": "stable-22_11"
-  }
-}
+language = "nodejs"
+run = "npm run web"
+entrypoint = "App.js"
+hidden = [".config", "package-lock.json", "node_modules", ".expo"]
+
+[env]
+NODE_VERSION = "18"
+
+[packager]
+language = "nodejs"
+manager = "npm"
+afterInstall = "echo 'Bağımlılıklar yüklendi! Web sunucusu başlatılıyor...'"
+
+[nix]
+channel = "stable-22_11"
