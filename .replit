@@ -1,15 +1,19 @@
-language = "nodejs"
-run = "npm run web"
+run = "npm install && npm run web"
 entrypoint = "App.js"
 hidden = [".config", "package-lock.json", "node_modules", ".expo"]
 
+[nix]
+channel = "stable-22_11"
+
+[nix.deps]
+pkgs = ["nodejs-18_x", "nodePackages.npm"]
+
 [env]
-NODE_VERSION = "18"
+PATH = "/nix/store/*-nodejs-18*/bin:/nix/store/*-npm-*/bin:$PATH"
 
 [packager]
 language = "nodejs"
-manager = "npm"
-afterInstall = "echo 'Bağımlılıklar yüklendi! Web sunucusu başlatılıyor...'"
 
-[nix]
-channel = "stable-22_11"
+[packager.features]
+packageSearch = true
+guessImports = true
