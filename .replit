@@ -1,14 +1,18 @@
 {
-  "entrypoint": "App.js",
-  "channel": "stable",
+  "language": "nodejs",
+  "run": "npm start",
+  "entrypoint": "index.js",
+  "hidden": [".config", "package-lock.json"],
   "env": {
     "NODE_VERSION": "18"
   },
   "packager": {
-    "afterInstall": "npm run web",
-    "ignoredPackages": ["android", "ios"],
-    "ignoredPaths": ["android", "ios"]
+    "language": "nodejs",
+    "manager": "npm"
   },
-  "interpreter": "node",
-  "replitPackages": ["nodejs-npm"]
+  "languages": {
+    "nodejs": {
+      "runner": "npm start"
+    }
+  }
 }
