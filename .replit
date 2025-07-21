@@ -1,0 +1,14 @@
+{
+  "entrypoint": "App.js",
+  "channel": "stable",
+  "env": {
+    "NODE_VERSION": "18"
+  },
+  "packager": {
+    "afterInstall": "npm run web",
+    "ignoredPackages": ["android", "ios"],
+    "ignoredPaths": ["android", "ios"]
+  },
+  "interpreter": "node",
+  "replitPackages": ["nodejs-npm"]
+}
