@@ -1,19 +1,8 @@
 run = "npm install && npm run web"
 entrypoint = "App.js"
-hidden = [".config", "package-lock.json", "node_modules", ".expo"]
 
 [nix]
 channel = "stable-22_11"
 
 [nix.deps]
-pkgs = ["nodejs-18_x", "nodePackages.npm"]
-
-[env]
-PATH = "/nix/store/*-nodejs-18*/bin:/nix/store/*-npm-*/bin:$PATH"
-
-[packager]
-language = "nodejs"
-
-[packager.features]
-packageSearch = true
-guessImports = true
+pkgs = ["nodejs-18_x", "nodePackages.npm", "nodePackages.expo-cli"]
