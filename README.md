@@ -150,3 +150,7 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 ---
 
 💡 **İpucu**: Expo Go uygulamasını iOS cihazınıza indirmeyi unutmayın!
+
+
+
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/uudemy/iban-mobile?utm_source=oss&utm_medium=github&utm_campaign=uudemy%2Fiban-mobile&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
